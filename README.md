@@ -16,25 +16,26 @@ The dataset consists of shopping transactions from customers who made both **onl
 
 ## 📊 Dataset Description
 
-> ℹ️ **Note**: The dataset was provided by **Miuul Bootcamp** and **cannot be shared publicly**.
+> ℹ️ **Note**: The dataset was provided by **Miuul Bootcamp** and **cannot be shared publicly**.  
+> ❗️ **No CSV file is created or included in this repository**; data preprocessing and cleaning are performed directly on the provided dataset.
 
 The dataset contains the following variables:
 
-| Variable | Description |
-|----------|-------------|
-| `master_id` | Unique customer ID |
-| `order_channel` | Platform used for shopping (Android, iOS, Desktop, Mobile) |
-| `last_order_channel` | Channel of the most recent purchase |
-| `first_order_date` | Date of the customer's first purchase |
-| `last_order_date` | Date of the customer's last purchase |
-| `last_order_date_online` | Date of the last online purchase |
-| `last_order_date_offline` | Date of the last offline purchase |
-| `order_num_total_ever_online` | Total number of online purchases |
-| `order_num_total_ever_offline` | Total number of offline purchases |
-| `customer_value_total_ever_online` | Total amount spent on online purchases |
-| `customer_value_total_ever_offline` | Total amount spent on offline purchases |
-| `interested_in_categories_12` | Categories purchased in the last 12 months |
-| `store_type` | Indicates from which of the 3 company types the customer shopped (e.g., A,B) |
+| Variable                    | Description                                              |
+|-----------------------------|----------------------------------------------------------|
+| `master_id`                 | Unique customer ID                                       |
+| `order_channel`             | Platform used for shopping (Android, iOS, Desktop, Mobile) |
+| `last_order_channel`        | Channel of the most recent purchase                      |
+| `first_order_date`          | Date of the customer's first purchase                    |
+| `last_order_date`           | Date of the customer's last purchase                     |
+| `last_order_date_online`    | Date of the last online purchase                         |
+| `last_order_date_offline`   | Date of the last offline purchase                        |
+| `order_num_total_ever_online` | Total number of online purchases                      |
+| `order_num_total_ever_offline` | Total number of offline purchases                    |
+| `customer_value_total_ever_online` | Total amount spent on online purchases            |
+| `customer_value_total_ever_offline` | Total amount spent on offline purchases          |
+| `interested_in_categories_12` | Categories purchased in the last 12 months            |
+| `store_type`                | Indicates from which of the 3 company types the customer shopped (e.g., A, B) |
 
 ---
 
@@ -44,55 +45,61 @@ The dataset contains the following variables:
 - `lifetimes`: Probabilistic CLTV modeling (BG/NBD & Gamma-Gamma)  
 - `sklearn`: Feature scaling  
 - `datetime`: Date calculations  
+- `matplotlib`, `seaborn`: Data visualization  
 
 ---
 
 ## ⚙️ Project Workflow
 
 1. **Data Cleaning & Preparation**  
-   - Outlier treatment using IQR method  
-   - Combining online & offline purchase metrics  
-   - Converting date columns to datetime objects  
+   - Outlier treatment using IQR method (capping extreme values)  
+   - Combining online & offline purchase metrics into omnichannel variables  
+   - Converting date columns to datetime objects for accurate time calculations  
 
 2. **CLTV Feature Engineering**  
-   - Calculated Recency, Frequency, T (Tenure), and Monetary values  
+   - Calculated Recency, Frequency, T (Tenure), and Monetary values per customer  
    - Used a snapshot date set 2 days after the last purchase in the dataset  
 
 3. **Model Building**  
-   - **BG/NBD Model** for expected number of future transactions  
-   - **Gamma-Gamma Model** for expected average profit  
+   - **BG/NBD Model** for estimating expected number of future transactions  
+   - **Gamma-Gamma Model** for estimating expected average profit per transaction  
    - Combined models to estimate **6-month CLTV** for each customer  
 
 4. **Customer Segmentation**  
    - Used quantile-based binning (`qcut`) to divide customers into 4 segments: A (top), B, C, D  
-   - Generated group-level insights for targeted marketing actions  
+   - Generated group-level insights to guide targeted marketing strategies  
 
 ---
 
 ## 🧠 Insights & Recommendations
 
-### Segment A & B (High CLTV):
-- High frequency and monetary values  
+### Segment A & B (High CLTV) ⭐
+- High purchase frequency and monetary values  
 - Recommend loyalty programs, exclusive campaigns, or early-access offers  
 - Focus on retention through personalized email or SMS reminders  
 
-### Segment C & D (Low CLTV):
+### Segment C & D (Low CLTV) 🔄
 - Customers may be newer or inactive  
 - Offer re-engagement promotions  
-- Consider retargeting ads or onboarding journeys to increase involvement  
+- Consider retargeting ads or onboarding journeys to increase engagement  
 
 ---
 
 ## 📎 Notes
 
 - The project was completed as part of the **Miuul Data Science Bootcamp**.  
-- Due to data confidentiality, the dataset is not available in this repository.  
+- Due to data confidentiality, the dataset is **not available** in this repository.  
+- No CSV data file is included or created here; all data processing is done in-code.  
 - All modeling and analysis were performed using open-source libraries.
 
 ---
 
 ## ✅ Final Remarks
 
-This project demonstrates the power of probabilistic models in customer analytics and shows how businesses can benefit from understanding their customer base in a **data-driven** way. The segmentation derived from CLTV predictions can significantly enhance the efficiency of marketing efforts.
+This project demonstrates the power of probabilistic models in customer analytics and shows how businesses can benefit from understanding their customer base in a **data-driven** way. The segmentation derived from CLTV predictions can significantly enhance the efficiency and personalization of marketing efforts.
+
+## 📫 Contact Me
+
+If you have any questions, suggestions, or would like to discuss potential opportunities, feel free to reach out!
 
 ---
