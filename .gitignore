@@ -31,5 +31,5 @@ dist/
 *.egg-info/
 .eggs/
 
-# Other
-*.pytest_cache/
+# Pytest cache folder
+.pytest_cache/
