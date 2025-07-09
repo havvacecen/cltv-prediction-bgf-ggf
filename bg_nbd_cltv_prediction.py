@@ -1,12 +1,10 @@
 # Import necessary libraries
 import datetime as dt
 import pandas as pd
-import matplotlib.pyplot as plt
 from lifetimes import BetaGeoFitter
 from lifetimes import GammaGammaFitter
 from lifetimes.plotting import plot_period_transactions
 from sklearn.preprocessing import MinMaxScaler
-import seaborn as sns
 
 # Set preferred display options for pandas
 pd.set_option('display.max_columns', None)  # Show all columns
