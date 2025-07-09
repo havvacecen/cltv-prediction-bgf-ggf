@@ -97,7 +97,7 @@ The dataset contains the following variables:
 
 ---
 
-📦 Dependencies
+## 📦 Dependencies
 
 This project relies on the following main Python libraries:
 
