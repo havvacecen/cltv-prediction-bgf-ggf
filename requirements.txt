@@ -1,0 +1,21 @@
+# Python cache files - these are automatically generated and should not be included
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folders - these contain installed packages and are large
+venv/
+env/
+.venv/
+.env/
+
+# IDE project files - PyCharm and VSCode settings should be local only
+.idea/
+.vscode/
+
+# Windows system files - these are created by Windows, no need to track
+Thumbs.db
+Desktop.ini
+
+# macOS system files - if using Mac, these files are system-generated
+.DS_Store
