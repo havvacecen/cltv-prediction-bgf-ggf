@@ -12,6 +12,55 @@ This project uses **probabilistic modeling techniques** to analyze historical pu
 
 The dataset consists of shopping transactions from customers who made both **online and offline purchases (OmniChannel)** between **2020 and 2021**.
 
+
+---
+
+## 🗂️ Project Structure
+
+The repository contains the following structure:
+
+
+├── cltv_prediction.py             # Main Python script containing the CLTV pipeline  
+├── requirements.txt               # List of required Python packages  
+├── .gitignore                     # Files and folders to ignore in Git  
+├── LICENSE                        # Project license  
+└── README.md                      # Project documentation  
+
+---
+
+## 📥 Installation
+
+To set up this project on your local machine, follow these steps:
+
+
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+```
+
+2. (Optional) Create and activate a virtual environment:
+```
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install the required packages:
+```
+pip install -r requirements.txt
+```
+---
+
+## ▶️ How to Run
+
+Once the environment is set up, you can run the script with:
+
+```
+python cltv_prediction.py
+```
+
+⚠️ Note: Ensure that the flo_data_20k_cs2.csv file is located in the same directory as the script, or adjust the file path in the code accordingly.
+
 ---
 
 ## 📊 Dataset Description
@@ -45,7 +94,17 @@ The dataset contains the following variables:
 - `lifetimes`: Probabilistic CLTV modeling (BG/NBD & Gamma-Gamma)  
 - `sklearn`: Feature scaling  
 - `datetime`: Date calculations  
-- `matplotlib`, `seaborn`: Data visualization  
+
+---
+
+📦 Dependencies
+
+This project relies on the following main Python libraries:
+
+- pandas
+- numpy
+- scikit-learn
+- lifetimes
 
 ---
 
@@ -91,6 +150,12 @@ The dataset contains the following variables:
 - Due to data confidentiality, the dataset is **not available** in this repository.  
 - No CSV data file is included or created here; all data processing is done in-code.  
 - All modeling and analysis were performed using open-source libraries.
+
+---
+
+📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
